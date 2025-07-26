@@ -1,0 +1,13 @@
+# Ignore environment variable files containing secrets.
+# Do NOT commit your .env files to version control!
+.env
+.env.*
+!.env.example
+
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
