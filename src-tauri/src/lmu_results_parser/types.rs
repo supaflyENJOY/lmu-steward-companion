@@ -54,7 +54,7 @@ pub struct RaceResults {
     #[serde(rename = "FixedUpgrades")]
     pub fixed_upgrades: u32,
     #[serde(rename = "LimitedTires")]
-    pub limited_tires: u32,
+    pub limited_tires: Option<u32>,
     #[serde(rename = "TireWarmers")]
     pub tire_warmers: Option<u32>,
     #[serde(alias = "Race", alias = "Practice1", alias = "Qualify")]
