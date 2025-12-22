@@ -108,6 +108,7 @@ pub enum StreamItem {
     Sent(Event),
     Chat(Event),
     ChatMessage(Event),
+    DriverChange(Event),
     Command(Event),
 }
 
