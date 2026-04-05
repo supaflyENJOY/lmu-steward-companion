@@ -80,7 +80,13 @@ pub async fn get_races(
     }
 
     let results_folder = lmu_path.unwrap().join("UserData/Log/Results");
-    let files = std::fs::read_dir(results_folder).unwrap();
+    let files = std::fs::read_dir(&results_folder).map_err(|e| {
+        format!(
+            "Failed to read results folder at '{}': {}",
+            results_folder.display(),
+            e
+        )
+    })?;
     let mut formatted_results = files
         .flatten()
         .map(|f| f.path())
